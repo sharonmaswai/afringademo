@@ -10,7 +10,29 @@
     <title>jQuery Progress Bars</title>
     <script src="https://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
     
-    <script src="js/script.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+    $("#over").each(function(){
+      var percentage = parseInt($(this).html());
+      if(percentage > 0){
+        $(this).animate({'width':''+percentage+'px'}, 63000);
+      }else{
+        $(this).css({'color':'black', 'background':'none'}, 800);
+      }
+    })
+    $(".bar").each(function(){
+      var percentage = parseInt($(this).html());
+      if(percentage > 0){
+        $(this).animate({'width':''+percentage+'px'}, 60000);
+      }else{
+        $(this).css({'color':'black', 'background':'none'}, 800);
+      }
+    })
+   
+  })
+    
+    
+    </script>
 </head>
 
 <style>
